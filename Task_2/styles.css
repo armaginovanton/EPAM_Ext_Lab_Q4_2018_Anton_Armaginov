@@ -1,0 +1,63 @@
+﻿.modal {
+    border: solid 2px black;
+    background: #fff;
+    align-self: center;
+    width: 350px;
+    height:auto;
+    border-radius: 5px;
+}
+
+    .modal:target {
+       
+    }
+
+TD {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+body {
+    position: center; 
+}
+
+input {
+    margin: 2px;
+    padding: 10px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.nameinput {
+    width: 135px;
+}
+
+.dateinput {
+    width: 100px;
+    height:10px;
+} 
+
+.usertable {
+    padding: 10px;
+    border-collapse: collapse;
+    border: ridge 2px black;
+}
+
+.regBut {
+    padding: 10px;
+    border: ridge 2px black;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.tableButton {
+    border: solid 1px black;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
