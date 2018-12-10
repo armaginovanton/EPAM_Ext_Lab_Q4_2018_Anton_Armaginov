@@ -37,7 +37,7 @@ namespace ConsoleApp_Task_3
             Random rnd = new Random();
             for (int i = 0; i < mass.Length; i++)
             {
-                mass[i] = rnd.Next(200)-100;
+                mass[i] = rnd.Next(200)-100;//todo pn ограничения рандома тоже в константы или в конфиги (если они одинаковы для многих классов)
             }
         }
 

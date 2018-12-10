@@ -9,7 +9,7 @@ namespace ConsoleApp_Task_3
         public static void Paint() {
             int n;
 
-            Console.WriteLine("Введите кол-во строк: ");
+            Console.WriteLine("Введите кол-во строк: ");//todo pn в ресурсы. Было бы проще добавлять новый язык. Нужно переписать все русские сообщения на английские иначе - невозможно проверить работоспособность.
             if (!Int32.TryParse(Console.ReadLine(), out n)) { return; }
 
             if (n > 0)
@@ -23,7 +23,7 @@ namespace ConsoleApp_Task_3
             }
             else
             {
-                Console.WriteLine("Число не должно быть меньше 1");
+                Console.WriteLine("Число не должно быть меньше 1");//todo pn сильная связность компонентов приложения
             }
         }
 
@@ -39,7 +39,7 @@ namespace ConsoleApp_Task_3
                 string s = new String(' ',n);
                 for (int i = 0; i < n; i++)
                 {
-                    s += "*";
+                    s += "*";//todo pn в константы
                     s = s.Remove(n-i, 1).Insert(n-i, "*");
                     Console.WriteLine(s);
                 }
@@ -64,7 +64,7 @@ namespace ConsoleApp_Task_3
                     string s = new String(' ', n);
                     for (int i = 0; i < j; i++)
                     {
-                        s += "*";
+                        s += "*";//todo pn в константы
                         s = s.Remove(n - i, 1).Insert(n - i, "*");
                         Console.WriteLine(s);
                     }
