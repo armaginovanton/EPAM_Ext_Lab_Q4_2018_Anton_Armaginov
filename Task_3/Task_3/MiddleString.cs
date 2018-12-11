@@ -29,17 +29,13 @@ namespace ConsoleApp_Task_3
             Console.WriteLine("Write second line");
             SecondString = Console.ReadLine();
             foreach (char ch in FirstString)
-            {
-                char[] chars = {ch};
-                string str = new string(chars);
-                if (!SecondString.Contains(str))
+                if (!SecondString.Contains(ch.ToString()))
                     FinalString += ch;
                 else
                 {
                     FinalString += ch;
                     FinalString += ch;
                 }
-            }
             Console.WriteLine("Result = {0}", FinalString);
         }
     }
