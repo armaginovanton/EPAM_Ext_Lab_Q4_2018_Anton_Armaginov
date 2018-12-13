@@ -15,9 +15,9 @@ namespace ConsoleApp_Task_3
             while (iterValue < n) { summ += iterValue; iterValue = iter++ * 5; }//todo pn я говорил, что нужно написать универсальное решение, а не для конкретного случая.
             iter = 0;
             iterValue = 0;
-            while (iterValue < n) { summ += iterValue; iterValue = iter++ * 3; }
+            while (iterValue < n) { if (iterValue % 5 != 0){summ += iterValue; } iterValue = iter++ * 3; }
 
-            Console.WriteLine("Сумма чисел кратных 3 или 5 и меньше 1000 равна "+summ);
+            Console.WriteLine("The sum of multiples of 3 or 5 and less than 1000 is "+summ);
         }
     }
 }

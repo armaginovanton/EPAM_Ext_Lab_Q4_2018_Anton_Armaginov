@@ -11,13 +11,13 @@ namespace ConsoleApp_Task_3
         public static void Generate()
         {
             Generate_mass();
-            Console.WriteLine("Cгенерированный массив:");
+            Console.WriteLine("Generated array: ");
             PrintArray(mass);
             Sort(mass);
-            Console.WriteLine("Отсортированный массив:");
+            Console.WriteLine("Sorted array: ");
             PrintArray(mass);
-            Console.WriteLine("Максимальное значение: "+Max(mass));
-            Console.WriteLine("Минимальное значение: "+Min(mass));
+            Console.WriteLine("Max value: "+Max(mass));
+            Console.WriteLine("Min value: "+Min(mass));
         }
 
         public static void Summ()
@@ -29,7 +29,7 @@ namespace ConsoleApp_Task_3
             {
                 if (mass[i] > 0) { summ += mass[i]; }
             }
-            Console.WriteLine("Cумма положительных элементов = "+summ);
+            Console.WriteLine("Sum of elements greater than zero = "+summ);
         }
 
         static void Generate_mass()

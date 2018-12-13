@@ -28,7 +28,7 @@ namespace ConsoleApp_Task_3
                     if (IsEven(x + y)) { summ += mass[x,y]; }
                 }
             }
-            Console.WriteLine("Cумма четных элементов = " + summ);
+            Console.WriteLine("The sum of even elements = " + summ);
         }
 
         static bool IsEven(int a)

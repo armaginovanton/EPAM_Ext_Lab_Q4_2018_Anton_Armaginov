@@ -11,7 +11,7 @@ namespace ConsoleApp_Task_3
                 
                 int task_num;
                 Console.Clear();
-                Console.WriteLine("Введите код задачи");
+                Console.WriteLine("Write task number");
                 if (!Int32.TryParse(Console.ReadLine(), out task_num)) {
                     task_num = 0;
                     }
@@ -22,7 +22,7 @@ namespace ConsoleApp_Task_3
                     {
                         case 0:
                             Console.Clear();
-                            Console.WriteLine("Введите код задачи");
+                            Console.WriteLine("Write task number");
                             break;
                         case 1:
                             AreaOfRectangle.calculateArea();
@@ -65,7 +65,7 @@ namespace ConsoleApp_Task_3
                             break;
                         default:
                             Console.Clear();
-                            Console.WriteLine("Вы ввели не верный код");
+                            Console.WriteLine("You entered an incorrect number");
                             break;
                     }
 

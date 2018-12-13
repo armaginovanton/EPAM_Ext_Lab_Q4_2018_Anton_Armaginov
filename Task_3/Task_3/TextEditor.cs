@@ -16,24 +16,24 @@ namespace ConsoleApp_Task_3
             {
                  if (italic){
                     if (underline){
-                        Console.WriteLine("Параметры надписи: bold, italic, underline");
+                        Console.WriteLine("Font options: bold, italic, underline");
                     }
-                    else { Console.WriteLine("Параметры надписи: bold, italic"); }
+                    else { Console.WriteLine("Font options: bold, italic"); }
                 }
                 else if (underline){
-                    Console.WriteLine("Параметры надписи: bold, underline");
+                    Console.WriteLine("Font options: bold, underline");
                 }
-                else { Console.WriteLine("Параметры надписи: bold"); }
+                else { Console.WriteLine("Font options: bold"); }
             } else if (italic) {
                 if (underline){
-                    Console.WriteLine("Параметры надписи: italic, underline");
+                    Console.WriteLine("Font options: italic, underline");
                 }
-                else { Console.WriteLine("Параметры надписи: italic"); }
+                else { Console.WriteLine("Font options: italic"); }
             } else if (underline) {
-                Console.WriteLine("Параметры надписи: underline");
-            } else { Console.WriteLine("Параметры надписи: none"); }
+                Console.WriteLine("Font options: underline");
+            } else { Console.WriteLine("Font options: none"); }
 
-            Console.WriteLine("Введите:");
+            Console.WriteLine("Enter: ");
             Console.WriteLine("        1: bold");
             Console.WriteLine("        2: italic");
             Console.WriteLine("        3: underline");
@@ -56,7 +56,7 @@ namespace ConsoleApp_Task_3
                     underline = !underline;
                     break;
                 default:
-                    Console.WriteLine("Введен неверный индекс!");
+                    Console.WriteLine("Invalid index entered!");
                     break;
             }
         }

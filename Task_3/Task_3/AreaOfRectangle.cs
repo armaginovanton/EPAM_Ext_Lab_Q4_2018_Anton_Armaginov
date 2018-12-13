@@ -11,19 +11,19 @@ namespace ConsoleApp_Task_3
             int a;
             int b;
 
-            Console.WriteLine("Введите первое число:");
+            Console.WriteLine("Write first number:");
             if (!Int32.TryParse(Console.ReadLine(), out a)) { return; }
 
-            Console.WriteLine("Введите второе число:");
+            Console.WriteLine("Write second number:");
             if (!Int32.TryParse(Console.ReadLine(), out b)) { return; }
 
             if ((a > 0) & (b > 0))
             {
-                Console.WriteLine("Площадь квадрата: " + a * b);
+                Console.WriteLine("Square area: " + a * b);
             }
             else
             {
-                Console.WriteLine("Сторона не должна быть меньше 1");
+                Console.WriteLine("Side must not be less than 1");
             }
 
         }

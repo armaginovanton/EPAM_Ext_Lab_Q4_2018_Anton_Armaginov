@@ -9,14 +9,14 @@ namespace ConsoleApp_Task_3
         public static void MiddleString()
         {
             int allWordLength = 0;
-            Console.WriteLine("Введите строку");
+            Console.WriteLine("Write line");
             string str1 = Console.ReadLine();
             string[] mas = str1.Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < mas.Length; i++)
             {
                 allWordLength = allWordLength + mas[i].Length;
             }
-            Console.WriteLine("Средняя длина строки = {0}", allWordLength / mas.Length);
+            Console.WriteLine("Middle length = {0}", allWordLength / mas.Length);
         }
 
         public static void DoublingString()
@@ -24,19 +24,19 @@ namespace ConsoleApp_Task_3
             string FirstString = "";
             string SecondString = "";
             string FinalString = "";
-            Console.WriteLine("Введите первую строку");
+            Console.WriteLine("Write first line");
             FirstString = Console.ReadLine();
-            Console.WriteLine("Введите вторую строку");
+            Console.WriteLine("Write second line");
             SecondString = Console.ReadLine();
             foreach (char ch in FirstString)
-                if (!SecondString.Contains(ch))
+                if (!SecondString.Contains(ch.ToString()))
                     FinalString += ch;
                 else
                 {
                     FinalString += ch;
                     FinalString += ch;
                 }
-            Console.WriteLine("Результат = {0}", FinalString);
+            Console.WriteLine("Result = {0}", FinalString);
         }
     }
 }

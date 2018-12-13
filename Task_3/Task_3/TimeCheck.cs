@@ -20,7 +20,7 @@ namespace ConsoleApp_Task_3
                     str += "*";
                 }
                 DateTime end = DateTime.Now;
-                Console.WriteLine("время конкатенации строк в string = {0}", end - start);
+                Console.WriteLine("String concatenation time in string = {0}", end - start);
 
                 DateTime start1 = DateTime.Now;
                 for (int i = 0; i < N; i++)
@@ -28,8 +28,9 @@ namespace ConsoleApp_Task_3
                     sb.Append("*");
                 }
                 DateTime end1 = DateTime.Now;
-                Console.WriteLine("время конкатенации строк в stringBuilder = {0}", end1 - start1);
-                Console.WriteLine("время конкатенации в stringBuilder быстрее в {0} раз при N  = {1}", (end - start) / (end1 - start1), N);
+                Console.WriteLine("String concatenation time in stringBuilder = {0}", end1 - start1);
+                Console.WriteLine("StringBuilder concatenation time is { 0} times faster when N = {1}", 
+                                    (end.Millisecond - start.Millisecond) / (end1.Millisecond - start1.Millisecond), N);
             }
         }
     }
