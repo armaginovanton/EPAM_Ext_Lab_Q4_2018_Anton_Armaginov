@@ -10,7 +10,7 @@ namespace Tests
     public class UserTests
     {
         [TestMethod]
-        public void TestCheck()
+        public void TestCheck()//todo pn не корректный тест. Каждый тест должен тестировать только одно действие (get, update etc), нужно разбить на разные методы.
         {
             List<User> userList = new List<User>() {  };
             userList.Add(new User { Name = "Ivan", ID = 1 });
@@ -24,7 +24,7 @@ namespace Tests
             Assert.AreEqual(false, save, "user is saved correctly");
 
             userMisha.ID = 4;
-            save = userRepository.Save(userMisha);
+            save = userRepository.Save(userMisha);//todo pn сохранение нужно проверять не только на то, что исключений не выпало, но и на то, что все поля сохранились. Т.е. после сохранения нужно выполнять get и сравнивать сохраненную запись с полученной.
             Assert.AreEqual(true, save, "user is saved correctly");
 
             int count = userRepository.GetAll().Count;

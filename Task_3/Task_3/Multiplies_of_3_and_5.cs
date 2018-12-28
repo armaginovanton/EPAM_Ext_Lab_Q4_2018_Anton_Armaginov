@@ -12,7 +12,7 @@ namespace ConsoleApp_Task_3
             int summ = 0;
             int iter = 0;
             int iterValue = 0;
-            while (iterValue < n) { summ += iterValue; iterValue = iter++ * 5; }
+            while (iterValue < n) { summ += iterValue; iterValue = iter++ * 5; }//todo pn я говорил, что нужно написать универсальное решение, а не для конкретного случая.
             iter = 0;
             iterValue = 0;
             while (iterValue < n) { if (iterValue % 5 != 0){summ += iterValue; } iterValue = iter++ * 3; }

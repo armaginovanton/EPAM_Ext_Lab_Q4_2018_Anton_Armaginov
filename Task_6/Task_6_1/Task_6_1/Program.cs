@@ -15,7 +15,7 @@ namespace Task_6_1
             string[] data = { "ss", "aa", "a", "abc" };
 
             Console.WriteLine(string.Join(" ", data));
-            delegSort(data);
+            delegSort(data);//todo np ты не понял задания. Нужно передавать делегат сравнения, а не весь метод сортировки. "Реализовать метод сравнения строк отдельным методом, передаваемым в сортировку через делегат."
 
             Console.ReadKey();
 
