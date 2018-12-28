@@ -22,7 +22,7 @@ namespace Task_6_2
             Console.ReadKey();
         }
 
-        class Office
+        class Office 
         {
             List<Person> Persons = new List<Person>();
 
@@ -35,7 +35,7 @@ namespace Task_6_2
             public void add(string name, int time)
             {
                 Person per = new Person { Name = name };
-                Console.WriteLine("[{0} come in]", per.Name);
+                Console.WriteLine("[{0} come in]", per.Name);//todo pn сильная связность
                 if (Persons.Count > 0) onPersonCame(per, time);
                 onPersonCame += per.Hello;
                 onpersonOut += per.GoodBye;
@@ -61,7 +61,7 @@ namespace Task_6_2
             public void Hello(Person person, int time)
             {
                 if (time <= 12)
-                    Console.WriteLine("'Good morning', {0}, - said {1}", person.Name, Name);
+                    Console.WriteLine("'Good morning', {0}, - said {1}", person.Name, Name);//todo pn дублирование кода. Строка сообщения подозрительно одинаковая. Может быть параметризована.
                 else
                     if (time <= 17)
                     Console.WriteLine("'Good day', {0}, - said {1}", person.Name, Name);
