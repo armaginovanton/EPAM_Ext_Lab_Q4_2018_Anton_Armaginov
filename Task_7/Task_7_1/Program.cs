@@ -18,7 +18,7 @@ namespace Task_7_1
 
     public static class ExtendingMethod 
     {
-        public static int Summ(this List<int> collection)
+        public static int Summ(this List<int> collection)//todo pn в задании написано "массива". Придираюсь, да :) 
         {
             int items = 0;
             foreach (var item in collection)

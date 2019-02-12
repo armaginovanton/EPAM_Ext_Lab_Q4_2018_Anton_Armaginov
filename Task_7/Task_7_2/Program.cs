@@ -31,13 +31,13 @@ namespace Task_7_2
             {
                 number = Convert.ToInt32(param);
             }
-            catch(Exception e)
+            catch(Exception e)//todo pn раз уж определил исключение - залогируй его
             {
                 number = 0;
                 return false;
             }
 
-            if (number >= 0)
+            if (number >= 0)//todo pn написать это ветвление в одну строку без использования if и тернарного оператора.
             {
                 return true;
             }
