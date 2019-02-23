@@ -136,6 +136,7 @@ AND
 SUBSTRING([Country],1,1) <= 'h'
 ORDER BY
 [Country]
+-- не заметил разницы между запросами 3.2 и 3.3
 
 --4.1 В таблице Products найти все продукты (колонка ProductName), где встречается подстрока 'chocolade'. 
 --Известно, что в подстроке 'chocolade' может быть изменена одна буква 'c' в середине - найти все продукты,
@@ -389,6 +390,7 @@ IN
 	WHERE 
 	[UnitsInStock] = 0
 )
+-- оператор '=' нельзя использовать т.к. количество принимаемых значений может быть больше чем 1
 
 --10.1 Высветить всех продавцов, которые имеют более 150 заказов. Использовать вложенный коррелированный SELECT. 
 SELECT 
@@ -434,13 +436,14 @@ FROM [Northwind].[Employees]
 ORDER BY [INDEX]
 
 --13.1 
-exec dbo.MaxPriceOrders 1996;
+exec [dbo].[GreatestOrders] 1997, 10;
 
 --13.2 
-exec dbo.SpecifiedDelay
+exec [dbo].[ShippedOrdersDiff] 30;
 
 --13.3 
 EXEC dbo.SubordinationInfo 2;
 
 --13.4 
-EXEC dbo.IsBoss 2;
+SELECT LastName +' '+ FirstName [Name], dbo.IsBoss(EmployeeID) [IsBoss]
+FROM [Northwind].[Employees]
