@@ -1,0 +1,36 @@
+﻿@model IEnumerable<My_WebApp.Models.RoleViewModel>
+@{
+    ViewBag.Title = "Role list";
+}
+
+<h2>Список ролей</h2>
+
+<table>
+    <tr></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(it => item.RoleId)</td>
+            <td>@Html.DisplayFor(it => item.RoleName)</td>
+            <td>
+                @Html.ActionLink("Изменить", "Edit",
+                new { controller = "Role", id = item.RoleId })
+            </td>
+            <td>
+                @Html.ActionLink("Просмотр", "Index",
+                new { controller = "Role", id = item.RoleId })
+            </td>
+            <td>
+                @Html.ActionLink("Удалить", "Delete",
+                new { controller = "Role", id = item.RoleId })
+            </td>
+
+        </tr>
+    }
+    <tr>
+        <td>
+            @Html.ActionLink("Добавить", "Create",
+            new { controller = "Role" })
+        </td>
+    </tr>
+</table>

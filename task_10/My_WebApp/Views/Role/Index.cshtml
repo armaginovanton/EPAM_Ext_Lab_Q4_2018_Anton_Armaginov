@@ -1,0 +1,14 @@
+﻿@model My_WebApp.Models.RoleViewModel
+@{
+    ViewBag.Title = "User";
+}
+
+@Html.ActionLink("К списку", "Details", new { controller = "Role", id = "all" })
+
+<h2>Роль @Model.RoleId</h2>
+
+@using (Html.BeginRouteForm("Default", null, FormMethod.Post,
+    new { @class = "roleCssClass", data_formType = "role" }))
+{
+    @Html.DisplayForModel();
+}

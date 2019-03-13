@@ -1,0 +1,16 @@
+﻿@model My_WebApp.Models.UserViewModel
+@{
+    ViewBag.Title = "User editor";
+}
+
+@Html.ActionLink("К списку", "Details", new { controller = "User", id = "all" })
+
+<h2>Изменить пользователя</h2>
+<h3>@ViewBag.Message</h3>
+
+@using (Html.BeginRouteForm("Default", null, FormMethod.Post,
+    new { @class = "userCssClass", data_formType = "user" }))
+{
+    @Html.EditorForModel();
+    <input type="submit" value="Сохранить" />
+}

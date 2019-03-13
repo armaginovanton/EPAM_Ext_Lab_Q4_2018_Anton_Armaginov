@@ -1,0 +1,15 @@
+﻿@model My_WebApp.Models.RoleViewModel
+@{
+    ViewBag.Title = "User editor";
+}
+
+@Html.ActionLink("К списку", "Details", new { controller = "Role", id = "all" })
+
+<h2>Изменить роль</h2>
+
+@using (Html.BeginRouteForm("Default", null, FormMethod.Post,
+    new { @class = "roleCssClass", data_formType = "role" }))
+{
+    @Html.EditorForModel();
+    <input type="submit" value="Сохранить" />
+}

@@ -1,0 +1,17 @@
+﻿@model My_WebApp.Models.UserViewModel
+
+@{
+    ViewBag.Title = "Delete user";
+}
+
+@Html.ActionLink("К списку", "Details", new { controller = "User", id = "all" })
+
+<h2>Удалить пользователя</h2>
+<h3>@ViewBag.Message</h3>
+
+@using (Html.BeginRouteForm("Default", null, FormMethod.Post,
+    new { @class = "userCssClass", data_formType = "user" }))
+{
+    @Html.DisplayForModel();
+    <input type="submit" value="Удалить" />
+}
