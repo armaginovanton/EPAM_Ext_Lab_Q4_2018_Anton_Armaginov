@@ -11,7 +11,7 @@ namespace DAL_Library.Repositories
     {
         public string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
-        private List<User> users = new List<User>();
+        private List<User> users = new List<User>();//todo pn это плохой подход. Если у тебя будет 100000 бользователей, тоже в список выгружать будешь? всех? лучше реализовать отдельными запросами к бд.
 
         public UserRepository(List<User> users)
         {
@@ -20,7 +20,7 @@ namespace DAL_Library.Repositories
 
         public bool Delete(int id)
         {
-            return users.Remove(Get(id));
+            return users.Remove(Get(id));//todo pn не понял прикола, а как из базы удалить?
         }
 
         public User Get(int id)
