@@ -1,0 +1,15 @@
+﻿@model My_WebApp.Models.UserViewModel
+
+@{
+    ViewBag.Title = "Create User";
+}
+
+@Html.ActionLink("К списку", "GetAll", new { controller = "User", id = "all" })
+
+<h2>Создать пользователя</h2>
+@using (Html.BeginRouteForm("Default", null, FormMethod.Post,
+    new { @class = "userCssClass", data_formType = "user" }))
+{
+    @Html.EditorForModel();
+    <input type="submit" value="Создать" />
+}

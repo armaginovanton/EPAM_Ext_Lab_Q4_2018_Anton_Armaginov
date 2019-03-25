@@ -1,0 +1,10 @@
+﻿@model My_WebApp.Models.FileViewModel
+@Html.ActionLink("К списку", "GetAll", new { controller = "File", id = "all" })
+
+<h2>Информация о файле</h2>
+
+@using (Html.BeginRouteForm("Default", null, FormMethod.Get,
+    new { @class = "userCssClass", data_formType = "file" }))
+{
+    @Html.DisplayForModel();
+}

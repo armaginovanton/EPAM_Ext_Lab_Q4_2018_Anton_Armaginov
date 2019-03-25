@@ -1,0 +1,36 @@
+﻿@model IEnumerable<My_WebApp.Models.FileViewModel>
+@{
+    ViewBag.Title = "File list";
+}
+
+<h2>Список файлов</h2>
+
+<table>
+    <tr></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(it => item.ID)</td>
+            <td>@Html.DisplayFor(it => item.Name)</td>
+            <td>
+                @Html.ActionLink("Изменить", "Edit",
+                new { controller = "File", id = item.ID })
+            </td>
+            <td>
+                @Html.ActionLink("Просмотр", "Details",
+                new { controller = "File", id = item.ID })
+            </td>
+            <td>
+                @Html.ActionLink("Удалить", "Delete",
+                new { controller = "File", id = item.ID })
+            </td>
+
+        </tr>
+    }
+    <tr>
+        <td>
+            @Html.ActionLink("Добавить", "Create",
+            new { controller = "File" })
+        </td>
+    </tr>
+</table>

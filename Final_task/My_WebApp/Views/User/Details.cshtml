@@ -1,0 +1,15 @@
+﻿@model My_WebApp.Models.UserViewModel
+@{
+    ViewBag.Title = "User";
+}
+
+@Html.ActionLink("К списку", "GetAll", new { controller = "User", id = "all" })
+
+<h2>Пользователь @Model.UserID</h2>
+
+
+@using (Html.BeginRouteForm("Default", null, FormMethod.Get,
+    new { @class = "userCssClass", data_formType = "user" }))
+{
+    @Html.DisplayForModel();
+}

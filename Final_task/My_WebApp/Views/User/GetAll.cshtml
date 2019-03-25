@@ -1,0 +1,40 @@
+﻿@model IEnumerable<My_WebApp.Models.UserViewModel>
+@{
+    ViewBag.Title = "User list";
+}
+
+<h2>Список пользователей</h2>
+<h3>@ViewBag.Message</h3>
+
+<table>
+    <tr></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(it => item.UserID)</td>
+            <td>@Html.DisplayFor(it => item.FirstName)</td>
+            <td>@Html.DisplayFor(it => item.LastName)</td>
+            <td>@Html.DisplayFor(it => item.City)</td>
+            <td>@Html.DisplayFor(it => item.Phone)</td>
+            <td>
+                @Html.ActionLink("Изменить", "Edit",
+                new { controller = "User", id = item.UserID })
+            </td>
+            <td>
+                @Html.ActionLink("Просмотр", "Details",
+                new { controller = "User", id = item.UserID })
+            </td>
+            <td>
+                @Html.ActionLink("Удалить", "Delete",
+                new { controller = "User", id = item.UserID })
+            </td>
+
+        </tr>
+    }
+    <tr>
+        <td>
+            @Html.ActionLink("Добавить", "Create",
+            new { controller = "User" })
+        </td>
+    </tr>
+</table>

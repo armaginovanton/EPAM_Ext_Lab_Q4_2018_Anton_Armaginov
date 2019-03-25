@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [dbo].[DeleteRole]
+	@ID int
+AS 
+DELETE FROM [dbo].[Roles]
+WHERE [RoleID] = @ID
+IF @@ROWCOUNT = 0 RETURN 1 
+ELSE RETURN 0

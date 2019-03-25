@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [dbo].[DeleteFile]
+	@ID int
+AS 
+DELETE FROM [dbo].[Files]
+WHERE [FileID] = @ID
+IF @@ROWCOUNT = 0 RETURN 1 
+ELSE RETURN 0

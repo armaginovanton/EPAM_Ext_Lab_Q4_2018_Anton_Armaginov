@@ -1,0 +1,16 @@
+﻿@model My_WebApp.Models.RoleViewModel
+
+@{
+    ViewBag.Title = "Create Role";
+}
+
+@Html.ActionLink("К списку", "GetAll", new { controller = "Role", id = "all" })
+
+<h2>Создать роль</h2>
+
+@using (Html.BeginRouteForm("Default", null, FormMethod.Post,
+    new { @class = "roleCssClass", data_formType = "role" }))
+{
+    @Html.EditorForModel();
+    <input type="submit" value="Создать" />
+}

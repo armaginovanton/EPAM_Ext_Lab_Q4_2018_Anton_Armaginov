@@ -1,0 +1,13 @@
+﻿@model My_WebApp.Models.FileViewModel
+
+@Html.ActionLink("К списку", "GetAll", new { controller = "File", id = "all" })
+
+<h2>Добавить файл</h2>
+<h3>Выберите файл для загрузки</h3>
+@using (Html.BeginForm("Create", "File", FormMethod.Post,
+    new { enctype = "multipart/form-data", @class = "userCssClass", data_formType = "file" }))
+{
+    @Html.EditorForModel();
+    <input type="file" name="upload" /><br>
+    <input type="submit" value="Сохранить" />
+}

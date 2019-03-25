@@ -1,0 +1,42 @@
+#crumbs ul {
+list-style: none;
+display: inline-table;
+}
+
+#crumbs ul li {
+display: inline;
+}
+#crumbs ul li a {
+display: inline;
+float: left;
+height: 50px;
+background: rgba(0, 0, 0, 0.1);
+text-align: center;
+padding: 30px 40px 0 80px;
+position: relative;
+margin: 0 10px 0 0;
+font-size: 20px;
+text-decoration: none;
+color: black;
+}
+
+#crumbs ul li a:after {
+    content: "";
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: -40px;
+    top: 0;
+    z-index: 1;
+}
+
+#crumbs ul li a:before {
+    content: "";
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid white;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
